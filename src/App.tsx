@@ -25,8 +25,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className='container'>
+      <div className='tags'>
         {tags.map((tag, index) => (
           <span key={index}>
             {tag}
@@ -38,10 +38,12 @@ const App: React.FC = () => {
       </div>
       <input
         type="text"
+        className='input-box'
         value={inputValue}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
         placeholder="Type and press space to add a tag"
+        disabled={tags.length === 10}
       />
     </div>
   );
