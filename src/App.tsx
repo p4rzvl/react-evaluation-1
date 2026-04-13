@@ -1,5 +1,5 @@
 import React, { useState, KeyboardEvent, ChangeEvent } from 'react';
-
+import './App.css'
 const App: React.FC = () => {
   const [tags, setTags] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState<string>('');
